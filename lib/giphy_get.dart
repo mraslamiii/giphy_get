@@ -62,8 +62,10 @@ class GiphyGet {
     }
 
     return showModalBottomSheet<GiphyGif>(
-      useRootNavigator: useRootNavigator,
-      clipBehavior: Clip.antiAlias,
+      useRootNavigator: false,
+      backgroundColor: Colors.transparent,
+
+      clipBehavior: Clip.antiAlias,useSafeArea: false,
       shape: Theme.of(context).bottomSheetTheme.shape ??
           RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
