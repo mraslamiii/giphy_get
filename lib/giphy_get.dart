@@ -98,8 +98,6 @@ class GiphyGet {
             ),
           )
         ],
-        child: SafeArea(
-          bottom : false,
           child: MainView(
             showGIFs: showGIFs,
             showStickers: showStickers,
@@ -107,7 +105,7 @@ class GiphyGet {
             tabTopBuilder: tapTopBuilder,
             tabBottomBuilder: tabBottomBuilder,
             searchAppBarBuilder: searchAppBarBuilder,
-          ),
+          
         ),
       ),
     );
