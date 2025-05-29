@@ -84,30 +84,30 @@ class _MainViewState extends State<MainView>
         return _bottomSheetBody();
       });
 
-  Widget _bottomSheetBody() => Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          widget.tabTopBuilder?.call(context) ?? GiphyTabTop(),
-          GiphyTabBar(
-            tabController: _tabController,
-            showGIFs: widget.showGIFs,
-            showStickers: widget.showStickers,
-            showEmojis: widget.showEmojis,
-          ),
-          SearchAppBar(
-            scrollController: this._scrollController,
-            searchAppBarBuilder: widget.searchAppBarBuilder,
-          ),
-          Expanded(
-            child: GiphyTabView(
-              tabController: _tabController,
-              scrollController: this._scrollController,
-              showGIFs: widget.showGIFs,
-              showStickers: widget.showStickers,
-              showEmojis: widget.showEmojis,
-            ),
-          ),
-          widget.tabBottomBuilder?.call(context) ?? GiphyTabBottom(),
-        ],
-      );
+  Widget _bottomSheetBody() => Container(color: Colors.grey.shade900,child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      widget.tabTopBuilder?.call(context) ?? GiphyTabTop(),
+      GiphyTabBar(
+        tabController: _tabController,
+        showGIFs: widget.showGIFs,
+        showStickers: widget.showStickers,
+        showEmojis: widget.showEmojis,
+      ),
+      SearchAppBar(
+        scrollController: this._scrollController,
+        searchAppBarBuilder: widget.searchAppBarBuilder,
+      ),
+      Expanded(
+        child: GiphyTabView(
+          tabController: _tabController,
+          scrollController: this._scrollController,
+          showGIFs: widget.showGIFs,
+          showStickers: widget.showStickers,
+          showEmojis: widget.showEmojis,
+        ),
+      ),
+      widget.tabBottomBuilder?.call(context) ?? GiphyTabBottom(),
+    ],
+  ),);
 }
