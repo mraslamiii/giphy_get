@@ -99,6 +99,7 @@ class GiphyGet {
           )
         ],
         child: SafeArea(
+          bottom : false,
           child: MainView(
             showGIFs: showGIFs,
             showStickers: showStickers,
